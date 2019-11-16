@@ -1,3 +1,3 @@
-# webpack-basic-website
+# jamesbell.net
 
-A template for building websites with webpack & babel.
+My personal website.

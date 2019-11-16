@@ -1,7 +1,8 @@
 {
-  "name": "webpack-basic-website",
+  "name": "jamesbell.net",
   "version": "1.0.0",
-  "description": "A template for building websites with webpack & babel.",
+  "description": "My personal website.",
+  "private": true,
   "scripts": {
     "build-dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
@@ -11,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jamesbellnet/webpack-basic-website.git"
+    "url": "https://github.com/jamesbellnet/jamesbell.net"
   },
   "browserslist": [
     "> 1%",
