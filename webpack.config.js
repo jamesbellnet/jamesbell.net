@@ -13,7 +13,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: process.env.NODE_ENV === 'production' ? 'js/app.[hash:8].js' : 'js/app.js'
+        publicPath: '/',
+        filename: process.env.NODE_ENV === 'production' ? 'app.[hash:8].js' : 'app.js'
     },
     devServer: {
         port: 3000
@@ -51,12 +52,27 @@ module.exports = {
                 ]
             },
             {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'ejs-loader'
+                    },
+                    {
+                        loader: 'extract-loader'
+                    },
+                    {
+                        loader: 'html-loader'
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/images'
+                            outputPath: 'assets/images',
+                            publicPath: 'assets/images'
                         }
                     }
                 ]
@@ -67,7 +83,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            outputPath: 'assets/fonts'
+                            outputPath: 'assets/fonts',
+                            publicPath: 'assets/fonts'
                         }
                     }
                 ]
@@ -77,10 +94,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            title: process.env.APP_NAME
+            title: process.env.APP_NAME,
+            favicon: './src/favicon.ico'
         }),
         new MiniCssExtractPlugin({
-            filename: process.env.NODE_ENV === 'production' ? 'css/app.[hash:8].css' : 'css/app.css'
+            filename: process.env.NODE_ENV === 'production' ? 'app.[hash:8].css' : 'app.css'
         }),
         new CleanWebpackPlugin()
     ],
