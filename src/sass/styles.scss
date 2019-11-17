@@ -136,14 +136,22 @@ table {
     font-family: 'Operator Mono Medium';
     font-style: normal;
     font-weight: normal;
-    src: local('Operator Mono Medium'), url('../fonts/OperatorMono-Medium.woff') format('woff');
+    src: local('Operator Mono Medium'),
+    url('../fonts/OperatorMono-Medium.woff') format('woff'),
+    url('../fonts/OperatorMono-Medium.eot') format('eot'),
+    url('../fonts/OperatorMono-Medium.ttf') format('truetype'),
+    url('../fonts/OperatorMono-Medium.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Operator Mono Medium Italic';
     font-style: normal;
     font-weight: normal;
-    src: local('Operator Mono Medium Italic'), url('../fonts/OperatorMono-MediumItalic.woff') format('woff');
+    src: local('Operator Mono Medium Italic'),
+    url('../fonts/OperatorMono-MediumItalic.woff') format('woff'),
+    url('../fonts/OperatorMono-MediumItalic.eot') format('eot'),
+    url('../fonts/OperatorMono-MediumItalic.ttf') format('truetype'),
+    url('../fonts/OperatorMono-MediumItalic.otf') format('opentype');
 }
 
 h1,
