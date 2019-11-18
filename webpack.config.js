@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: process.env.NODE_ENV,
@@ -99,7 +100,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: process.env.NODE_ENV === 'production' ? 'app.[hash:8].css' : 'app.css'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CopyPlugin([
+            './src/manifest.json',
+            { from: './src/images/icons', to: 'icons/' }
+        ]),
     ],
     optimization: {
         minimize: process.env.NODE_ENV === 'production' ? true : false,
