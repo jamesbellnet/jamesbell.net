@@ -94,8 +94,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
-            title: process.env.APP_NAME,
-            favicon: './src/favicon.ico'
+            title: process.env.APP_NAME
         }),
         new MiniCssExtractPlugin({
             filename: process.env.NODE_ENV === 'production' ? 'app.[hash:8].css' : 'app.css'
