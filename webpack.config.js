@@ -103,7 +103,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyPlugin([
             './src/manifest.json',
-            { from: './src/images/icons', to: 'icons/' }
+            { from: './src/images/icons', to: 'assets/images/icons/' }
         ]),
     ],
     optimization: {
