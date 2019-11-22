@@ -50,6 +50,7 @@ h2 {
     text-transform: uppercase;
     font-size: 22px;
     line-height: 20px;
+    letter-spacing: 2px;
     text-align: center;
 }
 
@@ -63,28 +64,20 @@ h2 {
 p,
 a {
     font-family: 'Operator Mono Medium Italic', Monaco, Consolas, monospace;
-    font-size: 18px;
+    font-size: 20px;
     color: $red;
     line-height: 20px;
     text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-    p,
-    a {
-        font-size: 20px;
-    }
-}
-
-a,
-li a h2 {
     text-decoration: none;
+}
+
+li a h2 {
     color: $red;
     transition: all 0.5s ease .2s ease-in-out;
 }
 
-a:hover,
-li a h2:hover {
+p > a:hover,
+li > a > h2:hover {
     color: $lightGreen;
 }
 
@@ -145,18 +138,8 @@ li a h2:hover {
     animation-name: fade-in;
     animation-fill-mode: forwards;
     h2 {
-        font-size: 19px;
+        font-size: 22px;
         color: $lightGreen;
-        bottom: 0px;
-        letter-spacing: 2px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .flex-3 {
-        h2 {
-            font-size: 22px;
-        }
     }
 }
 
