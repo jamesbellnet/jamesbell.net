@@ -111,7 +111,7 @@ li > a > h2:hover {
         text-align: center;
         li {
             display: block;
-            padding: 10px 0;
+            padding: 15px 0;
         }
     }
 }
@@ -138,8 +138,14 @@ li > a > h2:hover {
     animation-name: fade-in;
     animation-fill-mode: forwards;
     h2 {
-        font-size: 22px;
+        font-size: 18px;
         color: $lightGreen;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .flex-3 h2 {
+        font-size: 22px;
     }
 }
 
